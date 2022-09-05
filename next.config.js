@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['firebasestorage.googleapis.com','filmfare.wwmindia.com','i.giphy.com','upload.wikimedia.org','cdn1.vectorstock.com'],
+  },
 }
 
 module.exports = nextConfig
