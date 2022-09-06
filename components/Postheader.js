@@ -24,6 +24,7 @@ const Postheader = ({ authenticated }) => {
       <div className='postHeaderLogoCon'>
         <Image src='/shorts-logo.png' width={50} height={50} alt='' />
         <h2 className='postHeaderLogoText'>Shorts</h2>
+        <span className='postHeaderCredit' >Sankalp sachan</span>
       </div>
       <div className='postHeaderBtnCon'>
         {authenticated &&
