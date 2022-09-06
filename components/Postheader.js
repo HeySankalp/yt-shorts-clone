@@ -22,7 +22,7 @@ const Postheader = ({ authenticated }) => {
   return (
     <div className='postHeaderMainCon'>
       <div className='postHeaderLogoCon'>
-        <Image src='/shorts-logo.png' width={50} height={50} />
+        <Image src='/shorts-logo.png' width={50} height={50} alt='' />
         <h2 className='postHeaderLogoText'>Shorts</h2>
       </div>
       <div className='postHeaderBtnCon'>

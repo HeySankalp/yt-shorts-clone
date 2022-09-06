@@ -89,7 +89,7 @@ const Signup = () => {
             <div className='loginSignupLogoCon'>
                 <Link href={'/'} >
                     <a>
-                        <Image src='/shorts-logo.png' width={75} height={75} />
+                        <Image src='/shorts-logo.png' width={75} height={75} alt='' />
                     </a>
                 </Link>
                 <h2 className='loginSignupLogoText'>Signup</h2>

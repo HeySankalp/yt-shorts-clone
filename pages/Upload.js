@@ -77,7 +77,7 @@ const Upload = () => {
             <div className='uploadLogoCon'>
                 <Link href={'/'} >
                     <a>
-                        <Image src='/shorts-logo.png' width={75} height={75} />
+                        <Image src='/shorts-logo.png' width={75} height={75} alt='' />
                     </a>
                 </Link>
                 <h2 className='uploadLogoText'>Upload short</h2>
