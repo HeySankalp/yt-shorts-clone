@@ -61,7 +61,7 @@ a {
   position: relative;
   width: 87%;
   max-width: 400px;
-  height: 90vh;
+  height: 85vh;
   scroll-snap-type: y mandatory;
 }
 
