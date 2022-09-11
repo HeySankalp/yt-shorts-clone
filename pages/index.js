@@ -6,8 +6,17 @@ import Videoitem from '../components/Videoitem'
 import { auth, db } from '../firebase'
 
 
-
-
+export async function getServerSideProps(context) {
+  const ytshort = await db.collection("shorts")
+    .orderBy("timeStamps", "desc").get();
+  const short = ytshort.docs.map((doc)=>({
+    id: doc.id,
+    shortsData: doc.data()
+  }))
+  return {
+    props: { shorts:  JSON.parse(JSON.stringify(short)) }, // will be passed to the page component as props
+  }
+}
 
 
 export default function Home() {
@@ -57,12 +66,11 @@ export default function Home() {
           {shorts.map((short) => {
 
             return <Videoitem key={short.id} id={short.id} shortdata={short.shortsData}/>
-         
+   
           })
           }
         </div>
       </div>
-
     </div>
   )
 }
