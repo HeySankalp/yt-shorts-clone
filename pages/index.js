@@ -19,7 +19,7 @@ export async function getServerSideProps(context) {
 }
 
 
-export default function Home() {
+export default function Home({shorts}) {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [shorts, setShorts] = useState([])
@@ -36,23 +36,7 @@ export default function Home() {
     return unsubscribe;
   }, [])
 
-  useEffect(() => {
-    const unsubscribe = db
-      .collection('shorts')
-      .orderBy('timeStamps', 'desc')
-      .onSnapshot((snapshot) => {
-        setShorts(snapshot.docs.map((doc) => ({
-          id: doc.id,
-          shortsData: doc.data()
-        })));
-      })
-
-    return unsubscribe;
-
-  }, [])
-
-
-
+  
   return (
     <div >
       <Head>
